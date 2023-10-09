@@ -93,3 +93,39 @@ function sendEmail() {
         .catch((error) => console.log(error));
 };
 
+
+// email js 
+function emailSend() {
+
+
+    var username = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var number = document.getElementById("number").value;
+    // var course = document.getElementById("course").value;
+
+    var messageBody = "Name: " + username +
+        "<br/> Address: " + address +
+        "<br/> Phone:" + number;
+        //  +
+        // "<br/> Course:" + course;
+
+    // console.log(messageBody)
+
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "risewithbluetea@gmail.com",
+        Password: "87D50B87BAB0AE96AF731E752C462FA07810",
+        To: 'risewithbluetea@gmail.com',
+        From: "risewithbluetea@gmail.com",
+        Subject: "This is  rise with blue tea order",
+        Body: messageBody
+    }).then(
+        message => {
+            if (message == 'OK') {
+                swal("ধন্যবাদ ", `আপনার অর্ডার টি কনফার্ম হয়েছে। শিগগিরই আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবেন।
+                ইনশাআল্লাহ ৩/৪ দিনের মদ্ধে হোম ডেলিভারিতে পেয়ে যাবেন।`, "success");
+            }
+        }
+    );
+
+}
