@@ -46,7 +46,7 @@ function updateTotalProductPrice(isIncrease, input, total) {
 
     input.value = ProductInputValue
     if (total == productTotalPrice) {
-        total.innerText = parseInt(1320 * ProductInputValue)
+        total.innerText = parseInt(1400 * ProductInputValue)
     }
     else {
         total.innerText = parseInt(59 * ProductInputValue)

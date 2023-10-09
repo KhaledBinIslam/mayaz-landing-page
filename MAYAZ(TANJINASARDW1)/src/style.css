@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
 body {
-    background-image: linear-gradient(to right,#F27121, #E94057, #8A2387);
+    /* background-image: linear-gradient();
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     font-size: 16px;
 }
 

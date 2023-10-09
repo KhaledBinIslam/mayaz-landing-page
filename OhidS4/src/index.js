@@ -26,6 +26,7 @@ desccriptionBtn.addEventListener("click", () => {
 });
 
 
+
 const productDecrease = document.getElementById("product-decrease")
 const productIncrease = document.getElementById("product-increase")
 let productInputField = document.getElementById("product-input-field")
@@ -45,7 +46,7 @@ function updateTotalProductPrice(isIncrease, input, total) {
 
     input.value = ProductInputValue
     if (total == productTotalPrice) {
-        total.innerText = parseInt(1320 * ProductInputValue)
+        total.innerText = parseInt(1400 * ProductInputValue)
     }
     else {
         total.innerText = parseInt(59 * ProductInputValue)
@@ -65,32 +66,4 @@ productIncrease.addEventListener('click', function () {
     updateTotalProductPrice(true, productInputField, productTotalPrice)
 
 })
-
-
-
-// emial js added 
-
-function sendEmail() {
-    console.log('click')
-    var params = {
-        name: document.getElementById("name").value,
-        number: document.getElementById("number").value,
-        address: document.getElementById("address").value,
-        // quantity: document.getElementById("quantity").value,
-    }
-    console.log(params);
-    const serviceID = "service_9ahjpfa";
-    const templateID = "template_s85o54o";
-
-    emailjs.send(serviceID, templateID, params)
-        .then((res) => {
-            document.getElementById("name").value = "";
-            document.getElementById("number").value = "";
-            document.getElementById("address").value = "";
-            // document.getElementById("quantity").value = "";
-            console.log(res);
-            alert("We have received your message,thank you");
-        })
-        .catch((error) => console.log(error));
-};
 
