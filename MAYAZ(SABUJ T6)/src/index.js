@@ -69,27 +69,38 @@ desccriptionBtn.addEventListener("click", () => {
 
 // emial js added 
 
-function sendEmail() {
-    console.log('click')
-    var params = {
-        name: document.getElementById("name").value,
-        number: document.getElementById("number").value,
-        address: document.getElementById("address").value,
-        // quantity: document.getElementById("quantity").value,
-    }
-    console.log(params);
-    const serviceID = "service_9ahjpfa";
-    const templateID = "template_s85o54o";
+// email js 
+function emailSend() {
 
-    emailjs.send(serviceID, templateID, params)
-        .then((res) => {
-            document.getElementById("name").value = "";
-            document.getElementById("number").value = "";
-            document.getElementById("address").value = "";
-            // document.getElementById("quantity").value = "";
-            console.log(res);
-            alert("We have received your message,thank you");
-        })
-        .catch((error) => console.log(error));
-};
 
+    var username = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var number = document.getElementById("number").value;
+    // var course = document.getElementById("course").value;
+
+    var messageBody = "Name: " + username +
+        "<br/> Address: " + address +
+        "<br/> Phone:" + number;
+    //  +
+    // "<br/> Course:" + course;
+
+    // console.log(messageBody)
+
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "coffeestore225@gmail.com",
+        Password: "6C4071E074D581B9D2B8E2AC8B62FD3F762D",
+        To: 'coffeestore225@gmail.com',
+        From: "coffeestore225@gmail.com",
+        Subject: "This is  coffee store  order",
+        Body: messageBody
+    }).then(
+        message => {
+            if (message == 'OK') {
+                swal("ধন্যবাদ ", `আপনার অর্ডার টি কনফার্ম হয়েছে। শিগগিরই আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবেন।
+                ইনশাআল্লাহ ৩/৪ দিনের মদ্ধে হোম ডেলিভারিতে পেয়ে যাবেন।`, "success");
+            }
+        }
+    );
+
+}
