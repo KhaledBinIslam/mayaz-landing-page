@@ -247,7 +247,10 @@
             দেখুন
         </h3>
         <div class="flex justify-center">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UV2QadtMjbU?si=xpi-_hgjSTUunt4Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UV2QadtMjbU?si=xpi-_hgjSTUunt4Q"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </div>
     </section>
 
@@ -311,7 +314,7 @@
                         করুন
                     </h5>
                     <div>
-                        <form>
+                        <form onsubmit="emailSend(); reset(); return false;">
                             <div class="mb-3">
                                 <div>
                                     <label for="name" class="block text-sm font-bold ">আপনার
@@ -328,7 +331,8 @@
                                     <label for="address" class="block text-sm font-bold ">আপনার ঠিকানা *</label>
 
                                     <input type="text" name="address" id="address" placeholder="আপনার ঠিকানা লিখুন"
-                                        class="block  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded border  bg-white px-5 py-2.5 text-gray-700 " required />
+                                        class="block  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded border  bg-white px-5 py-2.5 text-gray-700 "
+                                        required />
                                 </div>
 
                             </div>
@@ -339,7 +343,8 @@
 
                                     <input type="text" name="number" id="number"
                                         placeholder="আপনার মোবাইল নাম্বার লিখুন"
-                                        class="block  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded border  bg-white px-5 py-2.5 text-gray-700 " required/>
+                                        class="block  mt-2 w-full placeholder-gray-400/70 dark:placeholder-gray-500 rounded border  bg-white px-5 py-2.5 text-gray-700 "
+                                        required />
                                 </div>
 
 
@@ -386,7 +391,7 @@
                                 </div>
                             </div> -->
 
-                            <button onclick="emailSend(); reset(); return false; "
+                            <button
                                 class="w-full px-6 py-2 bg-gradient-to-r 
                                 from-[#222f3e] to-[#B06AB3]  tracking-wide text-white rounded-3xl capitalize transition duration-300 ease-in-out transform hover:scale-x-75 text-xl font-bold">
                                 অর্ডার কনফার্ম করুন
