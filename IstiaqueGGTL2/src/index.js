@@ -25,6 +25,7 @@ desccriptionBtn.addEventListener("click", () => {
     }
 });
 
+
 const productDecrease = document.getElementById("product-decrease")
 const productIncrease = document.getElementById("product-increase")
 let productInputField = document.getElementById("product-input-field")
@@ -65,6 +66,7 @@ productIncrease.addEventListener('click', function () {
 
 })
 
+
 // email js 
 function emailSend() {
 
@@ -88,11 +90,11 @@ function emailSend() {
 
     Email.send({
         Host: "smtp.elasticemail.com",
-        Username: "coffeetimescoffeetimes@gmail.com",
-        Password: "343A3378911E061E5557B3659FC630D452CC",
-        To: 'coffeetimescoffeetimes@gmail.com',
-        From: "coffeetimescoffeetimes@gmail.com",
-        Subject: "This is Coffee Times order",
+        Username: "ketooncoffee@gmail.com",
+        Password: "AB11C581D830D54548953FABF680732E869F",
+        To: 'ketooncoffee@gmail.com',
+        From: "ketooncoffee@gmail.com",
+        Subject: "This is Keto On Coffee order",
         Body: messageBody
     }).then(
         message => {
@@ -104,4 +106,3 @@ function emailSend() {
     );
 
 }
-

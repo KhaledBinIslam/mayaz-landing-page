@@ -26,65 +26,66 @@ desccriptionBtn.addEventListener("click", () => {
 });
 
 
-// const productDecrease = document.getElementById("product-decrease")
-// const productIncrease = document.getElementById("product-increase")
-// let productInputField = document.getElementById("product-input-field")
-// const productTotalPrice = document.getElementById("product-total-price")
+const productDecrease = document.getElementById("product-decrease")
+const productIncrease = document.getElementById("product-increase")
+let productInputField = document.getElementById("product-input-field")
+const productTotalPrice = document.getElementById("product-total-price")
 
 
-// // updateProductTotalPrice
+// updateProductTotalPrice
 
-// function updateTotalProductPrice(isIncrease, input, total) {
-//     const productInput = input.value
-//     if (isIncrease == true) {
-//         ProductInputValue = parseInt(productInput) + 1
-//     }
-//     else if (isIncrease == false && productInput > 0) {
-//         ProductInputValue = parseInt(productInput) - 1
-//     }
+function updateTotalProductPrice(isIncrease, input, total) {
+    const productInput = input.value
+    if (isIncrease == true) {
+        ProductInputValue = parseInt(productInput) + 1
+    }
+    else if (isIncrease == false && productInput > 0) {
+        ProductInputValue = parseInt(productInput) - 1
+    }
 
-//     input.value = ProductInputValue
-//     if (total == productTotalPrice) {
-//         total.innerText = parseInt(1320 * ProductInputValue)
-//     }
-//     else {
-//         total.innerText = parseInt(59 * ProductInputValue)
-//     }
-
-
-
-// }
-// //  Increase and decrease event handle
-
-// productDecrease.addEventListener('click', function () {
-//     updateTotalProductPrice(false, productInputField, productTotalPrice)
+    input.value = ProductInputValue
+    if (total == productTotalPrice) {
+        total.innerText = parseInt(1320 * ProductInputValue)
+    }
+    else {
+        total.innerText = parseInt(59 * ProductInputValue)
+    }
 
 
-// })
-// productIncrease.addEventListener('click', function () {
-//     updateTotalProductPrice(true, productInputField, productTotalPrice)
 
-// })
+}
+//  Increase and decrease event handle
+
+productDecrease.addEventListener('click', function () {
+    updateTotalProductPrice(false, productInputField, productTotalPrice)
 
 
-// emial js added 
+})
+productIncrease.addEventListener('click', function () {
+    updateTotalProductPrice(true, productInputField, productTotalPrice)
+
+})
+
+
+
+
 
 // email js 
 function emailSend() {
 
-
     var username = document.getElementById("name").value;
     var address = document.getElementById("address").value;
     var number = document.getElementById("number").value;
+    var quantity = document.getElementById("product-input-field").value;
+
+    // console.log(username, address, number, quantity)
+
     // var course = document.getElementById("course").value;
 
     var messageBody = "Name: " + username +
         "<br/> Address: " + address +
-        "<br/> Phone:" + number;
-    //  +
-    // "<br/> Course:" + course;
-
-    // console.log(messageBody)
+        "<br/> Phone:" + number +
+        "<br/> Quantity:" + quantity;
 
     Email.send({
         Host: "smtp.elasticemail.com",
