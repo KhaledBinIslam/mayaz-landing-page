@@ -25,7 +25,6 @@ desccriptionBtn.addEventListener("click", () => {
     }
 });
 
-
 const productDecrease = document.getElementById("product-decrease")
 const productIncrease = document.getElementById("product-increase")
 let productInputField = document.getElementById("product-input-field")
@@ -67,9 +66,6 @@ productIncrease.addEventListener('click', function () {
 })
 
 
-
-
-
 // email js 
 function emailSend() {
 
@@ -86,20 +82,24 @@ function emailSend() {
         "<br/> Address: " + address +
         "<br/> Phone:" + number +
         "<br/> Quantity:" + quantity;
+    //  +
+    // "<br/> Course:" + course;
+
+    // console.log(messageBody)
 
     Email.send({
         Host: "smtp.elasticemail.com",
-        Username: "coffeestore225@gmail.com",
-        Password: "6C4071E074D581B9D2B8E2AC8B62FD3F762D",
-        To: 'coffeestore225@gmail.com',
-        From: "coffeestore225@gmail.com",
-        Subject: "This is  coffee store  order",
+        Username: "naturalproduct31222@gmail.com",
+        Password: "D9C1EF062D6C66E7B27D8196D8F236B7A5BF",
+        To: 'naturalproduct31222@gmail.com',
+        From: "naturalproduct31222@gmail.com",
+        Subject: "This is Natural Product order",
         Body: messageBody
     }).then(
         message => {
             if (message == 'OK') {
                 swal("ধন্যবাদ ", `আপনার অর্ডার টি কনফার্ম হয়েছে। শীগ্রই আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবেন।
-                ইনশাআল্লাহ ৩/৪ দিনের মধ্যে হোম ডেলিভারিতে পেয়ে যাবেন।`, "success");
+            ইনশাআল্লাহ ৩/৪ দিনের মধ্যে হোম ডেলিভারিতে পেয়ে যাবেন।`, "success");
             }
         }
     );
@@ -107,8 +107,8 @@ function emailSend() {
 }
 
 
-//disable-right-click-image
-document.addEventListener('DOMContentLoaded', function () {
+ //disable-right-click-image
+ document.addEventListener('DOMContentLoaded', function () {
     var images = document.getElementsByClassName('disable-right-click-image');
 
     for (var i = 0; i < images.length; i++) {
